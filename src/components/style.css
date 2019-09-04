@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.main ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  align-items: center;
+  background-color: #1b062f;
+  color: white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.navigation {
+  flex: 1;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation li {
+  list-style-type: none;
+  margin-right: 2rem;
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+  list-style-type: none;
+}
+
+.page-home {
+  align-items: center;
+  background-color: lightgray;
+  justify-content: center;
+}
+
+.craig-pic {
+  height: 10rem;
+}
