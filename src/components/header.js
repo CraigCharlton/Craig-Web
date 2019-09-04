@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
 
 export default () => {
@@ -18,15 +18,17 @@ export default () => {
   );
 
   return (
-    <div>
+    <div className="header">
       <h1>Craig Charlton</h1>
-      <ul>
-        {site.siteMetadata.menuLinks.map(link => (
-          <li key={link.name}>
-            {link.name}
-          </li>
-        ))}
-      </ul>
+      <div className="navigation">
+        <ul>
+          {site.siteMetadata.menuLinks.map(link => (
+            <li key={link.name}>
+              {link.name}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

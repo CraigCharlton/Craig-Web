@@ -4,6 +4,10 @@ import Image from '../images/craig.jpg';
 
 export default () => (
   <Layout>
-    <img src={Image} alt="me" width="50rem" />
+    <ul>
+      <li className='page page-home'>
+        <img src={Image} alt="me" className='craig-pic' />
+      </li>
+    </ul>
   </Layout>
 );

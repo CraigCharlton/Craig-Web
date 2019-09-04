@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from '../components/header.js';
+import '../components/style.css';
 
 export default ({ children }) => (
-  <div>
+  <React.Fragment>
     <Header />
-    <div>
+    <div className="main">
       {children}
     </div>
-  </div>
+  </React.Fragment>
 )
