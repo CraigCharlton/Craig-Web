@@ -4,7 +4,15 @@ module.exports = {
     menuLinks: [
       {
         name: 'home',
-        link: '/'
+        url: 'home'
+      },
+      {
+        name: 'about',
+        url: 'about'
+      },
+      {
+        name: 'contact',
+        url: 'contact'
       }
     ]
   },

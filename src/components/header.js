@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 export default () => {
   const { site } = useStaticQuery(
@@ -8,14 +9,19 @@ export default () => {
         site {
           siteMetadata {
             menuLinks {
-              link
               name
+              url
             }
           }
         }
       }
     `
   );
+
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
 
   return (
     <div className="header">
@@ -24,7 +30,7 @@ export default () => {
         <ul>
           {site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
-              {link.name}
+              <Link to={`/#${link.url}`}>{link.name}</Link>
             </li>
           ))}
         </ul>

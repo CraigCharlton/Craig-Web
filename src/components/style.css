@@ -10,7 +10,7 @@ body {
 
 .header {
   align-items: center;
-  background-color: #1b062f;
+  background-color: rgba(27, 6, 47, 0.7);
   color: white;
   display: flex;
   position: fixed;
@@ -38,6 +38,11 @@ h1 {
   margin-right: 2rem;
 }
 
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
 .page {
   display: flex;
   height: 100vh;
@@ -46,7 +51,17 @@ h1 {
 
 .page-home {
   align-items: center;
-  background-color: lightgray;
+  justify-content: center;
+}
+
+.page-about {
+  align-items: center;
+  background-color: gray;
+  justify-content: center;
+}
+
+.page-contact {
+  align-items: center;
   justify-content: center;
 }
 
