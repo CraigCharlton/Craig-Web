@@ -1,6 +1,7 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import Craig from '../images/craig.jpg';
 
 export default () => {
   const { site } = useStaticQuery(
@@ -18,15 +19,17 @@ export default () => {
     `
   );
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]')
+    require('smooth-scroll')('a[href*="#"]');
   }
 
   return (
-    <div className="header">
-      <h1>Craig Charlton</h1>
-      <div className="navigation">
+    <div className="navigation">
+      <div className="nav-top">
+        <img src={Craig} alt="me"/>
+      </div>
+      <div className="nav-middle">
         <ul>
           {site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
@@ -35,6 +38,13 @@ export default () => {
           ))}
         </ul>
       </div>
+      <div className="nav-bottom">
+        <ul>
+          <li>
+            {/* social media links added here */}
+          </li>
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};

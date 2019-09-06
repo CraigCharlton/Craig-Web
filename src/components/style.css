@@ -8,50 +8,80 @@ body {
   padding: 0;
 }
 
-.header {
-  align-items: center;
-  background-color: rgba(27, 6, 47, 0.7);
-  color: white;
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-h1 {
-  color: white;
+.nav-top {
   flex: 1;
   margin: 0 2rem;
 }
 
+.nav-top img {
+  border-radius: 5px;
+  height: 10rem;
+  margin-top: 1rem;
+}
+
 .navigation {
-  flex: 1;
-}
-
-.navigation ul {
+  align-items: center;
+  background-color: rgba(27, 6, 47, 0.7);
+  color: white;
   display: flex;
-  justify-content: flex-end;
+  flex-flow: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  width: 16rem;
 }
 
-.navigation li {
+.nav-middle {
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.nav-middle ul {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+}
+
+.nav-middle li {
   list-style-type: none;
-  margin-right: 2rem;
+  margin-top: 1rem;
 }
 
-.navigation a {
+.nav-middle a {
   color: white;
   text-decoration: none;
+}
+
+.nav-bottom li {
+  list-style-type: none;
 }
 
 .page {
   display: flex;
   height: 100vh;
   list-style-type: none;
+  margin-left: 16rem;
 }
 
 .page-home {
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+}
+
+.page-home .continue {
+  align-items: center;
+  border: 1px black solid;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 10rem;
 }
 
 .page-about {
@@ -63,8 +93,4 @@ h1 {
 .page-contact {
   align-items: center;
   justify-content: center;
-}
-
-.craig-pic {
-  height: 10rem;
 }

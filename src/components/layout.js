@@ -5,8 +5,6 @@ import '../components/style.css';
 export default ({ children }) => (
   <React.Fragment>
     <Header />
-    <div className="main">
-      {children}
-    </div>
+    <div className="main">{children}</div>
   </React.Fragment>
-)
+);
