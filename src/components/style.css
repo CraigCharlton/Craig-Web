@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'coolvetica';
+  src: url(../fonts/coolvetica.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'pokemon';
+  src: url(../fonts/pokemon.ttf) format('truetype');
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
 }
 
-.main ul {
+ul {
   margin: 0;
   padding: 0;
 }
@@ -57,8 +67,18 @@ body {
   text-decoration: none;
 }
 
+.nav-bottom ul {
+  margin-bottom: 1rem;
+}
+
 .nav-bottom li {
   list-style-type: none;
+}
+
+h1 {
+  font-family: 'coolvetica';
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .page {
@@ -76,7 +96,8 @@ body {
 
 .page-home .continue {
   align-items: center;
-  border: 1px black solid;
+  border: 6px darkgray double;
+  border-radius: 5px;
   display: flex;
   height: 4rem;
   justify-content: center;
@@ -86,11 +107,17 @@ body {
 
 .page-about {
   align-items: center;
-  background-color: gray;
+  background-color: lightgray;
+  justify-content: center;
+}
+
+.page-projects {
+  align-items: center;
   justify-content: center;
 }
 
 .page-contact {
   align-items: center;
+  background-color: lightgray;
   justify-content: center;
 }

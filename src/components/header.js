@@ -42,6 +42,7 @@ export default () => {
         <ul>
           <li>
             {/* social media links added here */}
+            Craig Charlton &copy;
           </li>
         </ul>
       </div>

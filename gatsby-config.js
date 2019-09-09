@@ -10,5 +10,11 @@ module.exports = {
         path: `./src/data/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/master-ball.png`
+      },
+    }
   ]
 };

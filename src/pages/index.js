@@ -20,6 +20,9 @@ export default () => {
         <li className="page page-about" id="about">
           <h2>About</h2>
         </li>
+        <li className="page page-projects" id="projects">
+          <h2>Projects</h2>
+        </li>
         <li className="page page-contact" id="contact">
           <h2>Contact</h2>
         </li>
