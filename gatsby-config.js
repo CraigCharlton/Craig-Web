@@ -1,20 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Craig Charlton',
-    menuLinks: [
-      {
-        name: 'home',
-        url: 'home'
-      },
-      {
-        name: 'about',
-        url: 'about'
-      },
-      {
-        name: 'contact',
-        url: 'contact'
-      }
-    ]
+    title: 'Craig Charlton'
   },
-  plugins: []
+  plugins: [
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+  ]
 };

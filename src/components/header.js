@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 import Craig from '../images/craig.jpg';
 
 export default () => {
-  const { site } = useStaticQuery(
+  const { allLinksJson } = useStaticQuery(
     graphql`
-      query SiteMetaData {
-        site {
-          siteMetadata {
-            menuLinks {
+      query LinksQuery {
+        allLinksJson {
+          edges {
+            node {
               name
               url
             }
@@ -31,9 +31,9 @@ export default () => {
       </div>
       <div className="nav-middle">
         <ul>
-          {site.siteMetadata.menuLinks.map(link => (
-            <li key={link.name}>
-              <Link to={`/#${link.url}`}>{link.name}</Link>
+          {allLinksJson.edges.map(link => (
+            <li key={link.node.name}>
+              <Link to={`/#${link.node.url}`}>{link.node.name}</Link>
             </li>
           ))}
         </ul>
