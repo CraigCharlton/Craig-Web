@@ -132,3 +132,21 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
+.blogs-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-link {
+  border: 1px black solid;
+  border-radius: 4px;
+  box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.14);
+  display: flex;
+  flex-flow: column;
+  margin: 0 1.5rem;
+  min-height: 20rem;
+  min-width: 33%;
+  padding: .5rem;
+  text-align: center;
+}

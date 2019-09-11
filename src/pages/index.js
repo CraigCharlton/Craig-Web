@@ -1,15 +1,44 @@
 import React from 'react';
 import Layout from '../components/layout.js';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import PostLink from "../components/post-link";
 
 //import blogs?
 //use query to get blogs, sort by date! max of 3 or 4?
 
-export default () => {
+export default ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
+}) => {
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('a[href*="#"]');
   }
+
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+
+  const { blogQuery } = useStaticQuery(
+    graphql`
+      query blogQuery {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+          edges {
+            node {
+              id
+              excerpt(pruneLength: 250)
+              frontmatter {
+                date
+                path
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  );
 
   return (
     <Layout>
@@ -35,7 +64,7 @@ export default () => {
         <li className="page page-blog" id="blog">
           <h2>Blog</h2>
           <div className="blogs-container">
-            here!
+            {Posts}
           </div>
         </li>
       </ul>
