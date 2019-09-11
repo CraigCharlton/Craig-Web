@@ -2,6 +2,9 @@ import React from 'react';
 import Layout from '../components/layout.js';
 import { Link } from 'gatsby';
 
+//import blogs?
+//use query to get blogs, sort by date! max of 3 or 4?
+
 export default () => {
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
