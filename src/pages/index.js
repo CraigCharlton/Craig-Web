@@ -23,7 +23,10 @@ export default ({
   const { blogQuery } = useStaticQuery(
     graphql`
       query blogQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 3
+        ) {
           edges {
             node {
               id
