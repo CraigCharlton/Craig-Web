@@ -3,11 +3,18 @@ module.exports = {
     title: 'Craig Charlton'
   },
   plugins: [
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        name: `links`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/src/blogs`,
       },
     },
     {
@@ -15,6 +22,8 @@ module.exports = {
       options: {
         icon: `src/images/master-ball.png`
       },
-    }
+    },
+    `gatsby-transformer-json`,
+    `gatsby-transformer-remark`
   ]
 };

@@ -43,11 +43,10 @@ ul {
 }
 
 .nav-middle {
+  display: flex;
   flex: 1;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
+  justify-content: center;
 }
 
 .nav-middle ul {
@@ -67,6 +66,12 @@ ul {
   text-decoration: none;
 }
 
+.nav-bottom {
+  align-items: flex-end;
+  display: flex;
+  flex: 1 1;
+}
+
 .nav-bottom ul {
   margin-bottom: 1rem;
 }
@@ -83,6 +88,7 @@ h1 {
 
 .page {
   display: flex;
+  flex-flow: column;
   height: 100vh;
   list-style-type: none;
   margin-left: 16rem;
@@ -120,4 +126,29 @@ h1 {
   align-items: center;
   background-color: lightgray;
   justify-content: center;
+}
+
+.page-blog {
+  align-items: center;
+  justify-content: center;
+}
+
+.blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.blog-link {
+  border: 1px black solid;
+  border-radius: 4px;
+  box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.14);
+  display: flex;
+  flex-flow: column;
+  margin: 0 1.5rem 2rem;
+  min-height: 20rem;
+  padding: .5rem;
+  text-align: center;
+  width: 12rem;
 }
