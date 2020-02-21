@@ -26,7 +26,7 @@ export default () => {
 
   return (
     <div className="navigation">
-      <div className="nav-top">
+      <div className="nav-left">
         <img src={Craig} alt="me"/>
       </div>
       <div className="nav-middle">
@@ -36,14 +36,6 @@ export default () => {
               <Link to={`/#${link.node.url}`}>{link.node.name}</Link>
             </li>
           ))}
-        </ul>
-      </div>
-      <div className="nav-bottom">
-        <ul>
-          <li>
-            {/* social media links added here */}
-            Craig Charlton &copy;
-          </li>
         </ul>
       </div>
     </div>

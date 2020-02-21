@@ -8,8 +8,16 @@
   src: url(../fonts/pokemon.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+
 body {
-  font-family: sans-serif;
+  color: #ccc;
+  font-family: 'Lato', sans-serif;
   margin: 0;
 }
 
@@ -18,72 +26,68 @@ ul {
   padding: 0;
 }
 
-.nav-top {
+.nav-left {
   flex: 1;
   margin: 0 2rem;
 }
 
-.nav-top img {
+.nav-left img {
   border-radius: 5px;
-  height: 10rem;
-  margin-top: 1rem;
+  height: 3rem;
 }
 
 .navigation {
   align-items: center;
-  background-color: rgba(27, 6, 47, 0.7);
-  color: white;
+  background: #333;
   display: flex;
-  flex-flow: column;
-  height: 100%;
+  flex-flow: row;
+  height: 4rem;
   justify-content: center;
   left: 0;
   position: fixed;
-  width: 16rem;
+  width: 100%;
 }
 
 .nav-middle {
   display: flex;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 
 .nav-middle ul {
   align-items: center;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   padding: 0;
 }
 
 .nav-middle li {
   list-style-type: none;
-  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 .nav-middle a {
-  color: white;
+  color: #ccc;
+  font-size: .7rem;
+  letter-spacing: 1px;
   text-decoration: none;
-}
-
-.nav-bottom {
-  align-items: flex-end;
-  display: flex;
-  flex: 1 1;
-}
-
-.nav-bottom ul {
-  margin-bottom: 1rem;
-}
-
-.nav-bottom li {
-  list-style-type: none;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-family: 'coolvetica';
-  font-size: 4rem;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .page {
@@ -91,24 +95,26 @@ h1 {
   flex-flow: column;
   height: 100vh;
   list-style-type: none;
-  margin-left: 16rem;
 }
 
 .page-home {
   align-items: center;
+  background: #fff;
+  color: #333;
   flex-direction: column;
   justify-content: center;
 }
 
 .page-home .continue {
   align-items: center;
-  border: 6px darkgray double;
-  border-radius: 5px;
+  border: 2px #333 solid;
+  border-radius: 1px;
+  color: #333;
   display: flex;
-  height: 4rem;
+  height: 3rem;
   justify-content: center;
   text-decoration: none;
-  width: 10rem;
+  width: 9rem;
 }
 
 .page-about {
@@ -144,11 +150,30 @@ h1 {
   border: 1px black solid;
   border-radius: 4px;
   box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.14);
+  color: #333;
   display: flex;
   flex-flow: column;
   margin: 0 1.5rem 2rem;
   min-height: 20rem;
   padding: .5rem;
   text-align: center;
+  text-decoration: none;
   width: 12rem;
+}
+
+.blog-post-container {
+  margin-left: 18rem;
+}
+
+.blog-post h1 {
+  margin-top: 0;
+}
+
+.toTop {
+  background: red;
+  height: 2rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
 }
