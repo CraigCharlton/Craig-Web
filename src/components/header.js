@@ -29,7 +29,7 @@ export default () => {
       <div className="nav-left">
         <img src={Craig} alt="me"/>
       </div>
-      <div className="nav-middle">
+      <div className="nav-right">
         <ul>
           {allLinksJson.edges.map(link => (
             <li key={link.node.name}>

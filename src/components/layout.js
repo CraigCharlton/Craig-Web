@@ -6,6 +6,6 @@ export default ({ children }) => (
   <React.Fragment>
     <Header />
     <div className="main">{children}</div>
-    <button className="toTop">Up</button>
+    <button className="toTop">^</button>
   </React.Fragment>
 );

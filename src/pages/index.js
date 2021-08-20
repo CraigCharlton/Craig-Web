@@ -44,7 +44,7 @@ export default ({
       <li className="page page-home" id="home">
         <h1>Craig Charlton</h1>
         <Link to="/#about" className="continue">
-          continue
+          about
         </Link>
       </li>
       <li className="page page-about" id="about">
